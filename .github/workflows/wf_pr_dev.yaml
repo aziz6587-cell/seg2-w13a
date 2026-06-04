@@ -17,7 +17,7 @@ jobs:
         run: npx stylelint **/*.css
       - name: Build website
         run: npx parcel build "source/index.html" --dist-dir "dist" --public-url "/"
-      - name: Build Docker Image
+      - name: build Docker Image
         run: docker image build . -t aziz6587-cell/seg1w13a:v01
       - name: See the Image
         run: docker image ls
